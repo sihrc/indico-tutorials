@@ -521,5 +521,28 @@ If you don&#39;t have python installed:<pre class="editor-colors lang-bash"><div
 </li>
 </ol>
 <h6 id="windows">Windows</h6>
-<p>Setting up windows is going to be a little bit involved, so if you have a choice, I highly recommend using either OSX or Linux instead.</p></body>
+<p>Setting up windows is going to be a little bit involved, so if you have a choice, I highly recommend using either OSX or Linux instead.</p>
+<p>For development in Windows, I recommend getting <a href="https://cygwin.com/install.html">Cygwin</a>, which gives Windows some commands commonly found in Linux / OSX environments. </p>
+<ol>
+<li><p>Download Cygwin and run the downloaded installer (64 bit or 32 bit <a href="http://windows.microsoft.com/en-us/windows/32-bit-and-64-bit-windows#1TC=windows-7">depending</a>) Go ahead and choose all the default options. When it asks to choose a mirror, choose whichever one you&#39;d like - it doesn&#39;t matter.</p>
+</li>
+<li><p>Add the cygwin path to your environment variables. <a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true">Instructions</a>. For windows 8,10, you can access environment variables by searching &quot;Environment Variables&quot; in your start menu. <br><br>
+Find the PATH variable under your System Environment Variables. Make sure there is a semicolon at the end &quot;;&quot; or add one if there isn&#39;t. Then, paste <code>C:\cygwin64\bin</code> at the end (ensure that folder exists). LEAVE THIS WINDOW OPEN. We&#39;ll be making more changes.</p>
+</li>
+<li><p>Download the latest version of Python 2 (first link) <a href="https://www.python.org/downloads/windows/">here</a>. Choose the Windows x86(-64) MSI installer (again 64 bit or regular).</p>
+</li>
+<li><p>After you&#39;ve run the Python Installer, go add to the PATH variable again: <code>C:\Python27</code> AND <code>C:\Python27\Scripts\</code></p>
+</li>
+<li><p>Now, open a Command Prompt. (Start Menu + &quot;cmd&quot;). If you are on an older version of windows, you may have to do Start -&gt; Run -&gt; &quot;cmd&quot;</p>
+</li>
+<li><p>Test the commands to make sure everything was installed and setup properly</p>
+<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>ls</span></span></div><div class="line"><span class="source shell"><span>python</span></span></div><div class="line"><span class="source shell"><span>pip</span></span></div></pre>
+<p>If <code>ls</code> fails, Cygwin was not installed and setup properly.
+If <code>python</code> fails, Python was not installed and setup properly.
+If <code>pip</code> fails, <code>C:\Python27\Scripts\</code> either does not exist or was not added properly.</p>
+</li>
+<li><p>In the Command Prompt still:</p>
+<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>pip&nbsp;install&nbsp;indicoio</span></span></div></pre>
+</li>
+</ol></body>
 </html>
