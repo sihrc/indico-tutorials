@@ -473,9 +473,9 @@ pre.editor-colors .fold-marker:after,
 }
 </style>
   </head>
-  <body class='markdown-preview'><h3 id="about-this-tutorial">About this tutorial</h3>
+  <body class='markdown-preview'><h3 id="about-this-tutorial">About this Tutorial</h3>
 <p>This tutorial assumes readers have no programming experience and do not have a development environment. It will guide readers through setting up a development environment and producing the code to access advanced machine learning solutions.</p>
-<p>If you run into any issues while following this tutorial: please feel free to create an issue on this repository or contact us at contact@indico.io</p>
+<p>If you run into any issues while following this tutorial: please feel free to create an issue on this repository or contact us at <a href="">contact@indico.io</a></p>
 <h5 id="code-editor">Code Editor</h5>
 <p>You will probably need some kind of text editor for your code. Unless you have a preference already, I recommend <a href="https://atom.io/">Atom</a>.</p>
 <h3 id="table-of-contents">Table of Contents</h3>
@@ -490,13 +490,13 @@ pre.editor-colors .fold-marker:after,
 <ol>
 <li>Open the Terminal application (CTRL + ALT + T) or (Super Key &amp; search &quot;Terminal&quot;) and update your package manager package lists.<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>sudo&nbsp;apt-get&nbsp;update</span></span></div></pre>
 </li>
-<li>Installing Python 2.7<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>sudo&nbsp;apt-get&nbsp;install&nbsp;-y&nbsp;python</span></span></div></pre>
+<li>Install Python 2.7<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>sudo&nbsp;apt-get&nbsp;install&nbsp;-y&nbsp;python</span></span></div></pre>
 </li>
 <li>Install <code>pip</code>, a python package manager<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>sudo&nbsp;apt-get&nbsp;install&nbsp;-y&nbsp;python-pip</span></span></div></pre>
 </li>
 <li>Install the python developer library<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>sudo&nbsp;apt-get&nbsp;install&nbsp;-y&nbsp;build-essential&nbsp;python-dev</span></span></div></pre>
 </li>
-<li>Install the Imaging dependencies
+<li>Install the imaging dependencies<br>
 For Ubuntu 12.04 LTS or Raspian Wheezy 7.0<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>sudo&nbsp;apt-get&nbsp;install&nbsp;-y&nbsp;libtiff4-dev&nbsp;libjpeg8-dev&nbsp;zlib1g-dev&nbsp;libfreetype6-dev&nbsp;liblcms2-dev&nbsp;libwebp-dev&nbsp;tcl8.5-dev&nbsp;tk8.5-dev&nbsp;python-tk</span></span></div></pre>
 For Ubuntu 14.04<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>sudo&nbsp;apt-get&nbsp;install&nbsp;-y&nbsp;libtiff5-dev&nbsp;libjpeg8-dev&nbsp;zlib1g-dev&nbsp;libfreetype6-dev&nbsp;liblcms2-dev&nbsp;libwebp-dev&nbsp;tcl8.6-dev&nbsp;tk8.6-dev&nbsp;python-tk</span></span></div></pre>
 </li>
@@ -511,7 +511,9 @@ For Ubuntu 14.04<pre class="editor-colors lang-bash"><div class="line"><span cla
 </li>
 <li>Install <a href="http://brew.sh/">Homebrew</a> (great package manager for OSX)<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>/usr/bin/ruby&nbsp;-e&nbsp;</span><span class="string quoted double shell"><span class="punctuation definition string begin shell"><span>&quot;</span></span><span class="string interpolated dollar shell"><span class="punctuation definition string begin shell"><span>$(</span></span><span>curl&nbsp;-fsSL&nbsp;</span><span class="markup underline link https hyperlink"><span>https://raw.githubusercontent.com/Homebrew/install/master/install</span></span><span class="punctuation definition string end shell"><span>)</span></span></span><span class="punctuation definition string end shell"><span>&quot;</span></span></span></span></div></pre>
 Add Homebrew&#39;s path to the start of your existing $PATH variable<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>open&nbsp;</span><span class="keyword operator tilde shell"><span>~</span></span><span>/.profile</span></span></div></pre>
-And add the following to the bottom of the file:<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>export&nbsp;PATH=/usr/local/bin:/usr/local/sbin:$PATH</span></span></span></div></pre></li>
+And add the following to the bottom of the file:<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span class="storage modifier shell"><span>export</span></span><span>&nbsp;PATH=/usr/local/bin:/usr/local/sbin:</span><span class="variable other normal shell"><span class="punctuation definition variable shell"><span>$</span></span><span>PATH</span></span></span></div></pre>
+Now, reload the profile.<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span class="support function builtin shell"><span>source</span></span><span>&nbsp;</span><span class="keyword operator tilde shell"><span>~</span></span><span>/.profile</span></span></div></pre>
+</li>
 <li>Make sure you have Python2.7 installed<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>python&nbsp;--version</span></span></div><div class="line"><span class="source shell"><span class="comment line number-sign shell"><span class="punctuation definition comment shell"><span>#</span></span><span>&nbsp;should&nbsp;respond&nbsp;with&nbsp;Python&nbsp;2.7.x</span><span>&nbsp;</span></span></span></div></pre>
 If you don&#39;t have python installed:<pre class="editor-colors lang-bash"><div class="line"><span class="source shell"><span>brew&nbsp;update</span></span></div><div class="line"><span class="source shell"><span>brew&nbsp;doctor</span></span></div><div class="line"><span class="source shell"><span>brew&nbsp;install&nbsp;python</span></span></div></pre>
 </li>
